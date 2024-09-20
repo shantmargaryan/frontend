@@ -1,0 +1,46 @@
+.title {
+    display: block;
+    margin-block-end: 20px;
+}
+
+.text {
+    margin-block-end: 45px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    margin-block-end: 10%;
+
+    @media(min-width:992px) {
+        flex-direction: row;
+    }
+}
+
+.rangeBox {
+    max-width: 600px;
+}
+
+.smallTitle {
+    margin-block-end: 10px;
+    font-size: 25px;
+}
+
+.smallText {
+    margin-block-end: 30px;
+}
+
+
+.accordionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.teamList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}

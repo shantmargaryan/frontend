@@ -5,6 +5,9 @@ import useSWR from "swr"
 function Create() {
 
     const { data, error, isLoading } = useSWR("http://localhost:1337/api/home-page?populate=create.background", fetcher)
+    if (error) {
+        return <div>failed to load</div>
+    }
     const createData = data?.data?.create
 
     return (

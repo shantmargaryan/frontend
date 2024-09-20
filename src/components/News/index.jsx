@@ -5,10 +5,12 @@ import useSWR from "swr"
 
 function News() {
 
-    const { data } = useSWR("http://localhost:1337/api/home-page?populate=news,news.news_items.img", fetcher)
+    const { data, error, isLoading } = useSWR("http://localhost:1337/api/home-page?populate=news,news.news_items.img", fetcher)
+    if (error) {
+        return <div>Failed to load</div>
+    }
     const newsData = data?.data?.news
-    console.log(newsData);
-    
+
 
     return (
         <section className={styles.news + " section"}>

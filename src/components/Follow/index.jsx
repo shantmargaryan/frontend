@@ -7,7 +7,10 @@ import useSWR from "swr"
 
 function Follow() {
 
-    const { data: follow } = useSWR("http://localhost:1337/api/home-page?populate=followData.followItems.img", fetcher)
+    const { data: follow, error } = useSWR("http://localhost:1337/api/home-page?populate=followData.followItems.img", fetcher)
+    if (error) {
+        return <div>Failed to load</div>
+    }
     const followsData = follow?.data?.followData
 
 

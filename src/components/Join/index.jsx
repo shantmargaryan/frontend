@@ -6,8 +6,12 @@ import useSWR from "swr"
 
 function join() {
 
-    const { data } = useSWR("http://localhost:1337/api/home-page?populate=join.background", fetcher)
-const join = data?.data?.join
+    const { data, error } = useSWR("http://localhost:1337/api/home-page?populate=join.background", fetcher)
+    if (error) {
+        return <div>Failed to load</div>
+    }
+    const join = data?.data?.join
+
     return (
         <section className={styles.join + " section"}
             style={{

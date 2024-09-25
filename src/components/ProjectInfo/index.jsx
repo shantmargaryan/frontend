@@ -4,7 +4,7 @@ import useSWR from "swr"
 
 function ProjectInfo({ title, id }) {
 
-    const { data: projectInfo } = useSWR(`http://localhost:1337/api/project-page?populate=${title}.img`, fetcher)
+    const { data: projectInfo } = useSWR(`https://smart-splendor-b3ed527c30.strapiapp.com/api/project-page?populate=${title}.img`, fetcher)
     if (!projectInfo) return
     const item = projectInfo?.data?.[title].find(item => +item.id === +id)
 

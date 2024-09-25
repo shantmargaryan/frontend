@@ -5,14 +5,15 @@ import useSWR from "swr"
 import { useParams } from "react-router-dom"
 function ProjectDetails() {
     const { title, id } = useParams()
-    const { data: projectDetails } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/project-details-page?populate=*", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/project-details-page?populate=*", fetcher)
+    const projectDetailsHero = data?.data
 
 
     return (
         <>
             <Hero
-                title={projectDetails?.title}
-                background={projectDetails?.background}
+                title={projectDetailsHero?.title}
+                background={projectDetailsHero?.background.url}
             />
             <ProjectInfo
                 title={title}

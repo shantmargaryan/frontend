@@ -8,8 +8,8 @@ import { fetcher } from '../../halpes/fetcher'
 import useSWR from 'swr'
 
 function blogDetailsBuilding({ id }) {
-  const { data: newsDetails } = useSWR(`http://localhost:1337/api/news-details/${id}?populate=*`, fetcher)
-  const { data } = useSWR('http://localhost:1337/api/blog-detail?populate=blogDetailsLatestNews.blogDetailsLatestNewsItem,blogDetailsCategories.blogDetailsCategoriesItem,blogDetailsTags.blogDetailsTagsItems.img', fetcher)
+  const { data: newsDetails } = useSWR(`https://smart-splendor-b3ed527c30.strapiapp.com/api/news-details/${id}?populate=*`, fetcher)
+  const { data } = useSWR('https://smart-splendor-b3ed527c30.strapiapp.com/api/blog-detail?populate=blogDetailsLatestNews.blogDetailsLatestNewsItem,blogDetailsCategories.blogDetailsCategoriesItem,blogDetailsTags.blogDetailsTagsItems.img', fetcher)
   const blogDetails = data?.data
   const blogDetailsLatestNews = blogDetails?.blogDetailsLatestNews
   const blogDetailsCategories = blogDetails?.blogDetailsCategories

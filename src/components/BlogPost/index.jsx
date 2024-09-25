@@ -8,7 +8,7 @@ import useSWR from 'swr'
 
 
 function BlogPost({ id }) {
-    const { data } = useSWR(`http://localhost:1337/api/news-items/${id}?populate=*`, fetcher)
+    const { data } = useSWR(`https://smart-splendor-b3ed527c30.strapiapp.com/api/news-items/${id}?populate=*`, fetcher)
     const { data: blogTitle } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/blog-page?populate=blogPost", fetcher)
     if (!data || !blogTitle) {
         return

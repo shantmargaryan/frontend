@@ -7,7 +7,7 @@ import useSWR from "swr"
 function TeamSingle() {
     const { id } = useParams()
 
-    const { data } = useSWR(`http://localhost:1337/api/team-items/${id}?populate=*`, fetcher)
+    const { data } = useSWR(`https://smart-splendor-b3ed527c30.strapiapp.com/api/team-items/${id}?populate=*`, fetcher)
     const { data: teamSingle } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/team-single-page?populate=teamSingleHero.background", fetcher)
     const teamSingleHero = teamSingle?.data?.teamSingleHero
 

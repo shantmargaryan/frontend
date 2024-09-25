@@ -5,7 +5,7 @@ import useSWR from "swr"
 
 function SpecialHeroItem() {
 
-    const { data } = useSWR("http://localhost:1337/api/special-hero-items?pagination[limit]=3", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/special-hero-items?pagination[limit]=3", fetcher)
 
     return (
         <ul className={styles.list + " list-reset"}>

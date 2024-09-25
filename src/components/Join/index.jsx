@@ -6,7 +6,7 @@ import useSWR from "swr"
 
 function join() {
 
-    const { data, error } = useSWR("http://localhost:1337/api/home-page?populate=join.background", fetcher)
+    const { data, error } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/home-page?populate=join.background", fetcher)
     if (error) {
         return <div>Failed to load</div>
     }

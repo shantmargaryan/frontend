@@ -3,7 +3,7 @@ import { fetcher } from "../../halpes/fetcher"
 import useSWR from "swr"
 function index() {
 
-    const { data } = useSWR("http://localhost:1337/api/services-single-page?populate=servicesSinglePoints.servicesSingleTitles,servicesSinglePoints.servicesSingleTexts", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/services-single-page?populate=servicesSinglePoints.servicesSingleTitles,servicesSinglePoints.servicesSingleTexts", fetcher)
     const points = data?.data?.servicesSinglePoints
 
     return (

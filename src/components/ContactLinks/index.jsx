@@ -4,7 +4,7 @@ import useSWR from "swr"
 
 function ContactLinks() {
 
-  const { data } = useSWR("http://localhost:1337/api/contact-page?populate=contactMeeting", fetcher)
+  const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/contact-page?populate=contactMeeting", fetcher)
   const contacts = data?.data?.contactMeeting
 
   return (

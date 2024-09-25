@@ -4,7 +4,7 @@ import { fetcher } from "../halpes/fetcher"
 import useSWR from "swr"
 import { useEffect, useRef } from "react"
 function Project() {
-    const { data } = useSWR("http://localhost:1337/api/project-page?populate=projectHero.background", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/project-page?populate=projectHero.background", fetcher)
     const projectHero = data?.data?.projectHero
 
     return (

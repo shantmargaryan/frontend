@@ -8,7 +8,7 @@ import useSWR from "swr";
 
 
 function ProjectTabs() {
-    const { data } = useSWR("http://localhost:1337/api/project-page?populate=bathRoom.img,bedRoom.img,kitchan.img,livingArea.img", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/project-page?populate=bathRoom.img,bedRoom.img,kitchan.img,livingArea.img", fetcher)
     const projectItem = data?.data
 
     return (

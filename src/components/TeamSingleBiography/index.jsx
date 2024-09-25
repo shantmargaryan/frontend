@@ -7,7 +7,7 @@ import useSWR from "swr";
 
 
 function TeamSingleBiography() {
-    const { data } = useSWR("http://localhost:1337/api/team-single-page?populate=teamInfo.teamInfoAccartion", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/team-single-page?populate=teamInfo.teamInfoAccartion", fetcher)
     const { data: team } = useSWR(`http://localhost:1337/api/team-items?populate=*&pagination[limit]=4`, fetcher)
     const teamItems = team?.data
     const teamInfo = data?.data?.teamInfo

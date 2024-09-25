@@ -9,7 +9,7 @@ import useSWR from "swr"
 
 function ServicesDesign() {
 
-    const { data } = useSWR("http://localhost:1337/api/services-single-page?populate=servicesSingleDesign.img", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/services-single-page?populate=servicesSingleDesign.img", fetcher)
     const servicesDesign = data?.data?.servicesSingleDesign
 
     return (

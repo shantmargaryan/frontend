@@ -4,7 +4,7 @@ import useSWR from "swr"
 
 function PricingItem() {
 
-    const { data } = useSWR("http://localhost:1337/api/pricings?populate=*", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/pricings?populate=*", fetcher)
     const price = data?.data
 
     return (

@@ -6,7 +6,7 @@ import useSWR from "swr"
 
 function Faq() {
 
-    const { data } = useSWR("http://localhost:1337/api/faq?populate=hero.background", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/faq?populate=hero.background", fetcher)
     const faqHero = data?.data?.hero
     return (
         <>

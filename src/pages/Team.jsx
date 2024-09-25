@@ -5,9 +5,9 @@ import { fetcher } from "../halpes/fetcher"
 import useSWR from "swr"
 function Team() {
 
-    const { data } = useSWR("http://localhost:1337/api/team-page?populate=teamHero.background", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/team-page?populate=teamHero.background", fetcher)
     const team = data?.data
-    const { data: teamItems } = useSWR("http://localhost:1337/api/team-items?populate=*", fetcher)
+    const { data: teamItems } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/team-items?populate=*", fetcher)
     const teamItem = teamItems?.data
     return (
         <Hero

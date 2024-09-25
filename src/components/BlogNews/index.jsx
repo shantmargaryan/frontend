@@ -7,7 +7,7 @@ import useSWR from 'swr';
 
 function BlogNews() {
     const { data: newsDetails } = useSWR(`http://localhost:1337/api/news-details/?populate=*`, fetcher)
-    const { data } = useSWR("http://localhost:1337/api/blog-page?populate=blogNews.blogNewsItems.img", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/blog-page?populate=blogNews.blogNewsItems.img", fetcher)
     const blogItems = data?.data?.blogNews
     const newsItems = newsDetails?.data
 

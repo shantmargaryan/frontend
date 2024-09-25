@@ -7,7 +7,7 @@ import useSWR from "swr"
 
 function Follow() {
 
-    const { data: follow, error } = useSWR("http://localhost:1337/api/home-page?populate=followData.followItems.img", fetcher)
+    const { data: follow, error } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/home-page?populate=followData.followItems.img", fetcher)
     if (error) {
         return <div>Failed to load</div>
     }

@@ -4,7 +4,7 @@ import { fetcher } from "../halpes/fetcher"
 import useSWR from "swr"
 function Contact() {
 
-    const { data } = useSWR("http://localhost:1337/api/contact-page?populate=contactHero.background", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/contact-page?populate=contactHero.background", fetcher)
     const contactHero = data?.data?.contactHero
 
     return (

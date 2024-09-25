@@ -13,7 +13,7 @@ import { fetcher } from "../../halpes/fetcher"
 import useSWR from "swr"
 function ServicesAbout() {
 
-    const { data } = useSWR("http://localhost:1337/api/about-page?populate=aboutUs.slider", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/about-page?populate=aboutUs.slider", fetcher)
     const about = data?.data?.aboutUs
     console.log(about);
 

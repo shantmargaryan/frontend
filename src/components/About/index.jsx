@@ -7,7 +7,7 @@ import { fetcher } from "../../halpes/fetcher"
 
 function About() {
 
-    const { data, error, isLoading } = useSWR("http://localhost:1337/api/home-page?populate=aboutUs.aboutUsItems.img", fetcher)
+    const { data, error, isLoading } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/home-page?populate=aboutUs.aboutUsItems.img", fetcher)
     if (error) {
         return <div>Failed to load</div>
     }

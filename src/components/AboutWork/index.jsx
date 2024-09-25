@@ -6,7 +6,7 @@ import AboutWorkItem from "../aboutWorkItem";
 
 
 function AboutWork() {
-    const { data } = useSWR("http://localhost:1337/api/about-page?populate=aboutItem.img", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/about-page?populate=aboutItem.img", fetcher)
     const aboutItem = data?.data?.aboutItem
 
 

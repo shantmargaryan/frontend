@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom"
 
 function BlogDetails() {
     const { id } = useParams()
-    const { data } = useSWR("http://localhost:1337/api/blog-detail?populate=blogDetailsHero.background", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/blog-detail?populate=blogDetailsHero.background", fetcher)
     const blogDetailsHero = data?.data?.blogDetailsHero
 
     return (

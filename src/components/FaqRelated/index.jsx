@@ -6,7 +6,7 @@ import { fetcher } from "../../halpes/fetcher"
 import useSWR from "swr"
 function FaqReated() {
 
-    const { data } = useSWR("http://localhost:1337/api/faq?populate=relatedQuestions.img,relatedQuestions.relatedQuestionsTexts", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/faq?populate=relatedQuestions.img,relatedQuestions.relatedQuestionsTexts", fetcher)
 const faqInfo = data?.data?.relatedQuestions
 
     return (

@@ -5,7 +5,7 @@ import useSWR from "swr"
 
 function News() {
 
-    const { data, error, isLoading } = useSWR("http://localhost:1337/api/home-page?populate=news,news.news_items.img", fetcher)
+    const { data, error, isLoading } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/home-page?populate=news,news.news_items.img", fetcher)
     if (error) {
         return <div>Failed to load</div>
     }

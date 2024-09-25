@@ -9,7 +9,7 @@ import useSWR from "swr"
 
 function FaqAnswered() {
 
-    const { data } = useSWR("http://localhost:1337/api/faq?populate=questionAnswered.img,questionAnswered.questionAnsweredTexts", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/faq?populate=questionAnswered.img,questionAnswered.questionAnsweredTexts", fetcher)
     const faqInfo = data?.data?.questionAnswered
 
 

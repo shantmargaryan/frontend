@@ -6,7 +6,7 @@ import useSWR from "swr"
 import { useParams } from "react-router-dom"
 function Blog() {
     const { id } = useParams()
-    const { data: blogData } = useSWR("http://localhost:1337/api/blog-page?populate=blogHero.background", fetcher)
+    const { data: blogData } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/blog-page?populate=blogHero.background", fetcher)
     const blogHero = blogData?.data?.blogHero
 
     return (

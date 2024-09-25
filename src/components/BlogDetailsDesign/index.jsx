@@ -5,7 +5,7 @@ import { LazyLoadImage as Image } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 function BlogDetailsDesign() {
 
-    const { data } = useSWR("http://localhost:1337/api/blog-detail?populate=blogDetailsDesign.img,blogDetailsDesign.texts", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/blog-detail?populate=blogDetailsDesign.img,blogDetailsDesign.texts", fetcher)
     const BlogDetailsDesign = data?.data?.blogDetailsDesign
 
     return (

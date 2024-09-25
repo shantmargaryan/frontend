@@ -6,7 +6,7 @@ import {fetcher} from "../halpes/fetcher"
 import useSWR from "swr"
 function SingleServices() {
 
-const {data} = useSWR("http://localhost:1337/api/services-single-page?populate=servicesHero.background", fetcher)
+const {data} = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/services-single-page?populate=servicesHero.background", fetcher)
 const servicesHero = data?.data?.servicesHero
 
     return (

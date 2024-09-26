@@ -6,7 +6,7 @@ import useSWR from "swr"
 
 function Footer() {
 
-    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/footer?populate=*", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/api/footer?populate=*", fetcher)
     const footerData = data?.data
 
     return (

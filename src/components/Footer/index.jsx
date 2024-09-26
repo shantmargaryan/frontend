@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom"
 import styles from "./footer.module.scss"
 import Logo from "/src/components/Logo"
-import {fetcher} from "../../halpes/fetcher"
+import { fetcher } from "../../halpes/fetcher"
 import useSWR from "swr"
 
 function Footer() {
 
-    const { data } = useSWR("http://localhost:3000/footer", fetcher)
+    const { data } = useSWR("https://smart-splendor-b3ed527c30.strapiapp.com/footer?populate=*", fetcher)
+    const footerData = data?.data
 
     return (
         <footer className={styles.footer}>
             <div className={styles.container + " container"}>
                 <div className={styles.content}>
                     <Logo />
-                            <p className={styles.text + " blackText"}>
-                                {data?.text}
-                            </p>
+                    <p className={styles.text + " blackText"}>
+                        {footerData?.text}
+                    </p>
                     <div className={styles.socials}>
                         <Link className={styles.socialLink + " link-reset"} to={"#"}>
                             <svg className={styles.icon}>
@@ -104,20 +105,20 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                            <div className={styles.contact}>
-                                <h3 className={styles.title + " blackTitle"}>
-                                    Contact
-                                </h3>
-                                <p className={styles.text + " blackText"}>
-                                    {data?.address}
-                                </p>
-                                <a className={styles.link + " link-reset link"} href={"mailto:" + data?.mail}>
-                                    {data?.mail}
-                                </a>
-                                <a className={styles.link + " link-reset link"} href={"tel:" + data?.phoneNumber}>
-                                    {data?.phoneNumber}
-                                </a>
-                            </div>
+                    <div className={styles.contact}>
+                        <h3 className={styles.title + " blackTitle"}>
+                            Contact
+                        </h3>
+                        <p className={styles.text + " blackText"}>
+                            {footerData?.address}
+                        </p>
+                        <a className={styles.link + " link-reset link"} href={"mailto:" + footerData?.mail}>
+                            {footerData?.mail}
+                        </a>
+                        <a className={styles.link + " link-reset link"} href={"tel:" + footerData?.phoneNumber}>
+                            {footerData?.phoneNumber}
+                        </a>
+                    </div>
                 </div>
             </div>
             <p className={styles.bottomText + " blackText"}>
